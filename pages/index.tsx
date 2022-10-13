@@ -16,12 +16,12 @@ const Home: NextPage = () => {
     <Layout>
       <Head />
       <Hero />
-      <Section wide>
+      <Section>
         <div>
           <h2>The place to work with... </h2>
         </div>
       </Section>
-      <Section row wide>
+      <Section row>
         <div className={styles.description}>
           <h2>Services</h2>
           <p>
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
           />
         </div>
       </Section>
-      <Section row wide>
+      <Section row>
         <div className={styles.image}>
           <NonOptimizedImage
             src={Work}
