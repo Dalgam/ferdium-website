@@ -3,7 +3,7 @@
 .codeblock {
   background-color: vars.$secondaryColor;
   padding: vars.$unit;
-  border-radius: vars.$unit;
+  border-radius: vars.$borderRadius;
   display: flex;
   justify-content: space-between;
 }
