@@ -5,7 +5,7 @@ import styles from "styles/components/CodeBlock.module.scss";
 import Button from "./Button";
 import Icon from "./Icon";
 
-type Props = { code: string };
+type Props = { code: string; comment?: string };
 
 const CodeBlock = (props: Props) => {
   const [copied, setCopied] = useState(false);
@@ -39,7 +39,10 @@ const CodeBlock = (props: Props) => {
 
   return (
     <div className={styles.codeblock}>
-      <code className={styles.code}>{props.code}</code>
+      <code className={styles.code}>
+        {props.comment && <p style={{ color: "green", margin: 0 }}>{"#" + props.comment}</p>}
+        {props.code}
+      </code>
       <Button icon onClick={copy}>
         {copied ? (
           <div className={styles.check}>

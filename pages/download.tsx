@@ -302,7 +302,13 @@ const Download = (props: Props) => {
         </p>
         <CodeBlockSection
           title='AUR (Arch Linux and derivatives)'
-          text={`yay -S ferdium-bin\n// or, to compile yourself\nyay -S ferdium`}
+          blocks={[
+            { text: "yay -S ferdium-bin" },
+            {
+              comment: "or, to compile yourself:",
+              text: "yay -S ferdium",
+            },
+          ]}
         />
         <CodeBlockSection title='Flatpak' text={`flatpak install flathub org.ferdium.Ferdium`} />
         {
@@ -310,22 +316,44 @@ const Download = (props: Props) => {
         }
         <CodeBlockSection
           title='Homebrew (macOS)'
-          text={`brew tap ferdium/ferdium\n# to install the last stable release:\nbrew install ferdium\n# or for Beta pre-releases:\nbrew install ferdium-beta\n# or for nightly pre-releases:\nbrew install ferdium-nightly`}
+          blocks={[
+            { text: "brew tap ferdium/ferdium" },
+            { comment: "to install the last stable release:", text: "brew install ferdium" },
+            { comment: "or for Beta pre-releases:", text: "brew install ferdium-beta" },
+            { comment: "or for nightly pre-releases:", text: "brew install ferdium-nightly" },
+          ]}
         />
         <CodeBlockSection
           title='Scoop (Windows)'
+          blocks={[
+            { text: "scoop bucket add versions" },
+            {
+              comment: "to install the last nightly pre-releases:",
+              text: "scoop install ferdium-nightly",
+            },
+          ]}
           text={`scoop bucket add versions\n# to install the last nightly pre-releases:\nscoop install ferdium-nightly`}
         />
-        { 
+        {
           // TODO: Update scoop installer to include stable version when bucket will be ready
-        } 
+        }
         <CodeBlockSection
-            title='Chocolatey (Windows)'
-            text={`# to install the last stable release:\nchoco install ferdium \n# or for beta pre-releases (when available):\nchoco install ferdium --pre`}
+          title='Chocolatey (Windows)'
+          blocks={[
+            { comment: "to install the last stable release:", text: "choco install ferdium" },
+            {
+              comment: "or for beta pre-releases (when available):",
+              text: "choco install ferdium --pre",
+            },
+          ]}
         />
         <CodeBlockSection
-            title='Winget (Windows)'
-            text={`# to install the last stable release:\nwinget install ferdium\n# or for Beta pre-releases:\nwinget install ferdium-beta\n# or for nightly pre-releases:\nwinget install ferdium-nightly`}
+          title='Winget (Windows)'
+          blocks={[
+            { comment: "to install the last stable release:", text: "winget install ferdium" },
+            { comment: "or for Beta pre-releases:", text: "winget install ferdium-beta" },
+            { comment: "or for nightly pre-releases:", text: "winget install ferdium-nightly" },
+          ]}
         />
         <CodeBlockSection
           title='Snap (Ubuntu linux and derivatives)'
