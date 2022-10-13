@@ -37,7 +37,7 @@
 @media only screen and (max-width: 1100px) {
   .card {
     flex-direction: column;
-    height: calc(vars.$unit * 32);
+    height: calc(vars.$unit * 36);
     width: calc(vars.$unit * 22);
     justify-content: center;
     & > * {
